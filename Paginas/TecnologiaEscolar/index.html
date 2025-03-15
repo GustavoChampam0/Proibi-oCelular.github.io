@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tecnologia no Ensino</title>
+  <meta name="description" content="Descubra como os celulares podem ser usados como ferramentas educacionais no ambiente escolar, com exemplos práticos, benefícios, desafios e interatividade para explorar o tema.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="../../Assets/CSS/style.css">
+  <link rel="stylesheet" href="../../Assets/CSS/home.css">
+  <link rel="shortcut icon" href="../../Assets/Media/Imagens/icon.png" type="image/png">
+  <style>
+    .expandable-card {
+      background: #0E1727;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out;
+    }
+    .expandable-card:hover {
+      background: #121D30;
+      box-shadow: inset 0 0 0 2px #328AF1;
+    }
+    .expandable-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .expandable-card-content {
+      display: none;
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .expandable-card-content.show {
+      display: flex;
+    }
+    .expandable-card-content img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      border-radius: 5px;
+    }
+    .quiz-container {
+      background: #0E1727;
+      border-radius: 10px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+    .quiz-question {
+      margin-bottom: 1.5rem;
+    }
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .quiz-option {
+      background: #132C49;
+      padding: 0.8rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .quiz-option:hover {
+      background: #1F98D7;
+    }
+    .quiz-result {
+      margin-top: 1rem;
+      display: none;
+      padding: 1rem;
+      border-radius: 5px;
+    }
+    .quiz-result.correct {
+      display: block;
+      background: #015d9b;
+      color: #0A0F19;
+    }
+    .quiz-result.incorrect {
+      display: block;
+      background: #FF5555;
+      color: #FFFFFF;
+    }
+    .content-section {
+      margin-bottom: 3rem;
+    }
+    .content-section p {
+      margin: 0.5rem 0;
+      line-height: 1.6;
+    }
+    .content-section ul {
+      list-style-type: disc;
+      padding-left: 2rem;
+      margin: 1rem 0;
+    }
+    .content-section li {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button class="btn-tamanho1 btn-cor-primaria btn-menu" id="handleShowModal">
+      <svg width="100" height="100" viewBox="0 0 100 100" class="icon-set">
+        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+        <path class="line line2" d="M 20,50 H 80" />
+        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+      </svg>
+    </button>
+    <ul class="hanken-grotesk regular-text navbar__links mobile__hidden">
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="#reportagens">Notícias</a></li>
+    </ul>
+    <nav class="poppins menu__links hidden">
+      <ul>
+        <li class="navigation__home mobile__show">
+          <a href="../../index.html">Home</a>
+          <a href="#reportagens">Notícias</a>
+        </li>
+        <hr class="mobile__show" />
+        <li><a href="../ArgumentosFavor/index.html">Argumentos a Favor</a></li>
+        <li><a href="../ArgumentosContra/index.html">Argumentos Contra</a></li>
+        <li><a href="../ImpactosEducacao/index.html">Impactos na Educação</a></li>
+        <li><a href="../ExperienciasGlobais/index.html">Experiências Globais</a></li>
+        <li><a href="../TecnologiaEscolar/index.html">Tecnologia no Ensino</a></li>
+        <li><a href="../DebateAtual/index.html">Debate Atual</a></li>
+        <li><a href="../PerspectivasFuturas/index.html">Perspectivas Futuras</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <article class="hanken-grotesk">
+        <h2>Tecnologia no Ensino</h2>
+        <p class="medium-text poppins">
+          Os celulares não são apenas dispositivos de entretenimento — eles podem revolucionar a educação! Nesta página, explore como os smartphones podem ser ferramentas poderosas no aprendizado, conheça exemplos práticos, desafios e participe de um quiz interativo para testar seus conhecimentos.
+        </p>
+      </article>
+    </section>
+
+    <section id="content">
+      <div class="content-section">
+        <h3 class="hanken-grotesk">Benefícios dos Celulares na Educação</h3>
+        <p class="poppins">
+          Os smartphones oferecem acesso instantâneo a uma vasta gama de recursos educacionais, transformando a maneira como os alunos aprendem. Eles podem ser usados para:
+        </p>
+        <ul class="poppins">
+          <li><strong>Acessar aplicativos educacionais:</strong> Ferramentas como Duolingo para aprendizado de idiomas, Khan Academy para aulas em vídeo e Google Classroom para organização de tarefas escolares.</li>
+          <li><strong>Promover a alfabetização digital:</strong> Habilidade essencial no mercado de trabalho atual, ajudando os alunos a se familiarizarem com tecnologia desde cedo.</li>
+          <li><strong>Facilitar a pesquisa:</strong> Os estudantes podem buscar informações em tempo real, como artigos, vídeos e enciclopédias online.</li>
+          <li><strong>Incentivar a colaboração:</strong> Plataformas como Google Docs e Microsoft Teams permitem que os alunos trabalhem juntos em projetos, mesmo estando em locais diferentes.</li>
+        </ul>
+        <p class="poppins">
+          Além disso, os celulares tornam o aprendizado mais interativo e personalizado, aumentando o engajamento dos alunos. Por exemplo, gamificação através de apps como Quizlet pode transformar revisões de conteúdo em jogos divertidos.
+        </p>
+      </div>
+
+      <div class="content-section">
+        <h3 class="hanken-grotesk">Exemplos de Aplicativos Educacionais</h3>
+        <p class="poppins">
+          Veja alguns aplicativos que já estão transformando a educação:
+        </p>
+        <div class="expandable-card">
+          <div class="expandable-card-header">
+            <h4 class="hanken-grotesk">Duolingo</h4>
+            <img src="../../Assets/Icones/angulo-pequeno-para-baixo.svg" class="medium-icon" alt="Expandir">
+          </div>
+          <div class="expandable-card-content">
+            <img src="../../Assets/Media/Imagens/duo.jpg" alt="Logo do Duolingo">
+            <p class="poppins">
+              Um aplicativo de aprendizado de idiomas que usa gamificação para ensinar vocabulário e gramática. Os alunos ganham pontos e avançam em níveis, tornando o aprendizado divertido e motivador.
+            </p>
+          </div>
+        </div>
+        <div class="expandable-card">
+          <div class="expandable-card-header">
+            <h4 class="hanken-grotesk">Khan Academy</h4>
+            <img src="../../Assets/Icones/angulo-pequeno-para-baixo.svg" class="medium-icon" alt="Expandir">
+          </div>
+          <div class="expandable-card-content">
+            <img src="../../Assets/Media/Imagens/khan.jpg" alt="Logo da Khan Academy">
+            <p class="poppins">
+              Oferece milhares de aulas em vídeo gratuitas sobre matemática, ciências, história e mais. Os alunos podem aprender no seu próprio ritmo e praticar com exercícios interativos.
+            </p>
+          </div>
+        </div>
+        <div class="expandable-card">
+          <div class="expandable-card-header">
+            <h4 class="hanken-grotesk">Google Classroom</h4>
+            <img src="../../Assets/Icones/angulo-pequeno-para-baixo.svg" class="medium-icon" alt="Expandir">
+          </div>
+          <div class="expandable-card-content">
+            <img src="../../Assets/Media/Imagens/google.jpg" alt="Logo do Google Classroom">
+            <p class="poppins">
+              Uma plataforma que organiza tarefas, permite a entrega de trabalhos e facilita a comunicação entre professores e alunos, tudo diretamente do celular.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h3 class="hanken-grotesk">Desafios do Uso de Celulares</h3>
+        <p class="poppins">
+          Apesar dos benefícios, o uso de celulares nas escolas apresenta desafios que precisam ser enfrentados para garantir um ambiente de aprendizado saudável:
+        </p>
+        <ul class="poppins">
+          <li><strong>Distrações:</strong> Notificações de redes sociais, jogos e mensagens podem desviar a atenção dos alunos durante as aulas.</li>
+          <li><strong>Desigualdade de acesso:</strong> Nem todos os alunos têm smartphones modernos ou acesso à internet confiável, o que pode ampliar desigualdades educacionais.</li>
+          <li><strong>Uso inadequado:</strong> Sem supervisão, os celulares podem ser usados para trapacear em provas ou acessar conteúdos impróprios.</li>
+          <li><strong>Falta de treinamento:</strong> Muitos professores não estão preparados para integrar a tecnologia de forma eficaz, o que pode limitar os benefícios.</li>
+        </ul>
+        <p class="poppins">
+          Para superar esses desafios, as escolas precisam estabelecer políticas claras, como horários específicos para uso dos celulares e treinamento para professores.
+        </p>
+      </div>
+
+      <div class="content-section">
+        <h3 class="hanken-grotesk">Estudo de Caso: Uma Escola que Adotou os Celulares</h3>
+        <p class="poppins">
+          Em uma escola secundária em Helsinki, Finlândia, os professores decidiram integrar os celulares ao currículo. Os alunos usam smartphones para:
+        </p>
+        <ul class="poppins">
+          <li>Gravar vídeos explicativos como parte de projetos de ciências.</li>
+          <li>Participar de quizzes online durante as aulas, usando apps como Kahoot.</li>
+          <li>Colaborar em documentos compartilhados para trabalhos em grupo.</li>
+        </ul>
+        <p class="poppins">
+          Resultados mostram que o engajamento dos alunos aumentou em 25%, e os professores relataram maior interação em sala de aula. No entanto, a escola implementou regras rígidas: os celulares só podem be usados durante atividades específicas, e há penalidades para uso indevido.
+        </p>
+      </div>
+
+      <div class="content-section">
+        <h3 class="hanken-grotesk">Teste Seus Conhecimentos: Quiz Interativo</h3>
+        <div class="quiz-container">
+          <div class="quiz-question">
+            <p class="poppins large-text">Qual é um dos principais benefícios do uso de celulares na educação?</p>
+            <div class="quiz-options">
+              <div class="quiz-option" data-answer="correct">Acesso a recursos educacionais</div>
+              <div class="quiz-option" data-answer="incorrect">Aumento das distrações</div>
+              <div class="quiz-option" data-answer="incorrect">Redução da interação social</div>
+            </div>
+            <div class="quiz-result correct">
+              <p class="poppins">Correto! Os celulares oferecem acesso a uma vasta gama de recursos educacionais, como aplicativos e materiais online.</p>
+            </div>
+            <div class="quiz-result incorrect">
+              <p class="poppins">Incorreto! Embora os celulares possam trazer desafios, o principal benefício é o acesso a recursos educacionais.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <hr />
+    <div class="medias-sociais">
+      <a href="#"><img src="../../Assets/Icones/instagram.svg" alt="Instagram" class="icon-set medium-icon"></a>
+      <a href="#"><img src="../../Assets/Icones/linkedin.svg" alt="LinkedIn" class="icon-set medium-icon"></a>
+      <a href="#"><img src="../../Assets/Icones/whatsapp.svg" alt="WhatsApp" class="icon-set medium-icon"></a>
+      <a href="#"><img src="../../Assets/Icones/tik-tok.svg" alt="TikTok" class="icon-set medium-icon"></a>
+      <a href="#"><img src="../../Assets/Icones/reddit.svg" alt="Reddit" class="icon-set medium-icon"></a>
+      <a href="#"><img src="../../Assets/Icones/github.svg" alt="GitHub" class="icon-set medium-icon"></a>
+    </div>
+    <div>
+      <p class="poppins small-text">©Copyright 2025, todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="../../Assets/Scripts/home.js" type="text/javascript"></script>
+  <script>
+    document.querySelectorAll('.expandable-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const content = card.querySelector('.expandable-card-content');
+        content.classList.toggle('show');
+      });
+    });
+
+    document.querySelectorAll('.quiz-option').forEach(option => {
+      option.addEventListener('click', () => {
+        const question = option.closest('.quiz-question');
+        const resultCorrect = question.querySelector('.quiz-result.correct');
+        const resultIncorrect = question.querySelector('.quiz-result.incorrect');
+        
+        resultCorrect.style.display = 'none';
+        resultIncorrect.style.display = 'none';
+
+        if (option.dataset.answer === 'correct') {
+          resultCorrect.style.display = 'block';
+        } else {
+          resultIncorrect.style.display = 'block';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experiências Globais</title>
+  <meta name="description" content="Conheça como diferentes países lidam com a questão dos celulares nas escolas, com exemplos detalhados, resultados e um quiz interativo para explorar o tema.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="../../Assets/CSS/style.css">
+  <link rel="stylesheet" href="../../Assets/CSS/home.css">
+  <link rel="shortcut icon" href="../../Assets/Media/Imagens/icon.png" type="image/png">
+  <style>
+    .expandable-card {
+      background: #0E1727;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out;
+    }
+    .expandable-card:hover {
+      background: #121D30;
+      box-shadow: inset 0 0 0 2px #328AF1;
+    }
+    .expandable-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .expandable-card-content {
+      display: none;
+      margin-top: 1rem;
+    }
+    .expandable-card-content.show {
+      display: block;
+    }
+    .quiz-container {
+      background: #0E1727;
+      border-radius: 10px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+    .quiz-question {
+      margin-bottom: 1.5rem;
+    }
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .quiz-option {
+      background: #132C49;
+      padding: 0.8rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .quiz-option:hover {
+      background: #1F98D7;
+    }
+    .quiz-result {
+      margin-top: 1rem;
+      display: none;
+      padding: 1rem;
+      border-radius: 5px;
+    }
+    .quiz-result.correct {
+      display: block;
+      background: #015d9b;
+      color: #0A0F19;
+    }
+    .quiz-result.incorrect {
+      display: block;
+      background: #FF5555;
+      color: #FFFFFF;
+    }
+    .content-section {
+      margin-bottom: 3rem;
+    }
+    .content-section p {
+      margin: 0.5rem 0;
+      line-height: 1.6;
+    }
+    .content-section ul {
+      list-style-type: disc;
+      padding-left: 2rem;
+      margin: 1rem 0;
+    }
+    .content-section li {
+      margin-bottom: 0.5rem;
+    }
+    .world-map {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .country-card {
+      background: #0E1727;
+      border-radius: 10px;
+      padding: 1rem;
+      width: 30%;
+      min-width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button class="btn-tamanho1 btn-cor-primaria btn-menu" id="handleShowModal">
+      <svg width="100" height="100" viewBox="0 0 100 100" class="icon-set">
+        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+        <path class="line line2" d="M 20,50 H 80" />
+        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+      </svg>
+    </button>
+    <ul class="hanken-grotesk regular-text navbar__links mobile__hidden">
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="#reportagens">Notícias</a></li>
+    </ul>
+    <nav class="poppins menu__links hidden">
+      <ul>
+        <li class="navigation__home mobile__show">
+          <a href="../../index.html">Home</a>
+          <a href="#reportagens">Notícias</a>
+        </li>
+        <hr class="mobile__show" />
+        <li><a href="../ArgumentosFavor/index.html">Argumentos a Favor</a></li>
+        <li><a href="../ArgumentosContra/index.html">Argumentos Contra</a></li>
+        <li><a href="../ImpactosEducacao/index.html">Impactos na Educação</a></li>
+        <li><a href="../ExperienciasGlobais/index.html">Experiências Globais</a></li>
+        <li><a href="../TecnologiaEscolar/index.html">Tecnologia no Ensino</a></li>
+        <li><a href="../DebateAtual/index.html">Debate Atual</a></li>
+        <li><a href="../PerspectivasFuturas/index.html">Perspectivas Futuras</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <article class="hanken-grotesk">
+        <h2>Experiências Globais</h2>
+        <p class="medium-text poppins">
+          Viaje pelo mundo e descubra como diferentes países abordam o uso de celulares nas escolas! Explore políticas variadas, seus resultados e participe de um quiz interativo para testar o que você aprendeu.
+        </p>
+      </article>
+    </section>
+
+    <section id="content">
+      <div class="content-section">
+        <h3 class="hanken-grotesk">Políticas Globais sobre Celulares nas Escolas</h3>
+        <p class="poppins">
+          Países ao redor do mundo adotam abordagens distintas para lidar com o uso de celulares nas escolas, refletindo suas prioridades educacionais e culturais. Abaixo, veja alguns exemplos em destaque:
+        </p>
+        <div class="world-map">
+          <div class="country-card">
+            <h4 class="hanken-grotesk">França</h4>
+            <p class="poppins">Desde 2018, uma lei nacional proíbe celulares para alunos até 15 anos, visando reduzir distrações e melhorar o foco.</p>
+          </div>
+          <div class="country-card">
+            <h4 class="hanken-grotesk">Estados Unidos</h4>
+            <p class="poppins">Políticas variam por estado e distrito, com algumas escolas banindo completamente e outras permitindo uso educacional.</p>
+          </div>
+          <div class="country-card">
+            <h4 class="hanken-grotesk">Finlândia</h4>
+            <p class="poppins">Integra celulares ao ensino como ferramentas de pesquisa e colaboração, com supervisão para evitar abusos.</p>
+          </div>
+          <div class="country-card">
+            <h4 class="hanken-grotesk">Austrália</h4>
+            <p class="poppins">Muitas escolas implementaram restrições parciais, permitindo uso apenas em atividades supervisionadas desde 2019.</p>
+          </div>
+          <div class="country-card">
+            <h4 class="hanken-grotesk">Coreia do Sul</h4>
+            <p class="poppins">Adota uma abordagem híbrida, com banimento em algumas horas e uso controlado para aprendizado digital.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h3 class="hanken-grotesk">Exemplos Detalhados de Experiências</h3>
+        <div class="expandable-card">
+          <div class="expandable-card-header">
+            <h4 class="hanken-grotesk">França: Resultados da Proibição</h4>
+            <img src="../../Assets/Icones/angulo-pequeno-para-baixo.svg" class="medium-icon" alt="Expandir">
+          </div>
+          <div class="expandable-card-content">
+            <p class="poppins">
+              Após a lei de 2018, professores relataram um aumento de 15% na concentração dos alunos. Houve também uma redução de 30% nos casos de cyberbullying, mas surgiram desafios como a dificuldade de comunicação em emergências.
+            </p>
+          </div>
+        </div>
+        <div class="expandable-card">
+          <div class="expandable-card-header">
+            <h4 class="hanken-grotesk">Finlândia: Uso Educacional</h4>
+            <img src="../../Assets/Icones/angulo-pequeno-para-baixo.svg" class="medium-icon" alt="Expandir">
+          </div>
+          <div class="expandable-card-content">
+            <p class="poppins">
+              Em Helsinki, os celulares são usados para gravar vídeos de projetos e participar de quizzes online. Isso aumentou o engajamento em 20%, mas exige regras rígidas para evitar distrações.
+            </p>
+          </div>
+        </div>
+        <div class="expandable-card">
+          <div class="expandable-card-header">
+            <h4 class="hanken-grotesk">Estados Unidos: Variação Regional</h4>
+            <img src="../../Assets/Icones/angulo-pequeno-para-baixo.svg" class="medium-icon" alt="Expandir">
+          </div>
+          <div class="expandable-card-content">
+            <p class="poppins">
+              No Texas, a proibição total melhorou notas em 10%, enquanto em Nova York, o uso controlado em aulas de ciência aumentou a participação em 15%, mostrando a diversidade de abordagens.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h3 class="hanken-grotesk">Lições Aprendidas Globalmente</h3>
+        <p class="poppins">
+          As experiências internacionais revelam padrões importantes sobre o uso de celulares nas escolas:
+        </p>
+        <ul class="poppins">
+          <li><strong>Supervisão é chave:</strong> Países com regras claras e supervisão (como a Finlândia) relatam melhores resultados do que aqueles sem diretrizes.</li>
+          <li><strong>Contexto importa:</strong> Políticas eficazes levam em conta a infraestrutura local, como acesso à internet e nível socioeconômico.</li>
+          <li><strong>Equilíbrio é essencial:</strong> Uma abordagem híbrida, combinando uso educacional e restrições, parece oferecer os melhores resultados em muitos casos.</li>
+        </ul>
+        <p class="poppins">
+          Esses insights podem guiar escolas no Brasil e em outros lugares na criação de políticas adaptadas às suas necessidades.
+        </p>
+      </div>
+
+      <div class="content-section">
+        <h3 class="hanken-grotesk">Teste Seus Conhecimentos: Quiz Interativo</h3>
+        <div class="quiz-container">
+          <div class="quiz-question">
+            <p class="poppins large-text">Qual país implementou uma proibição nacional de celulares em escolas desde 2018?</p>
+            <div class="quiz-options">
+              <div class="quiz-option" data-answer="correct">França</div>
+              <div class="quiz-option" data-answer="incorrect">Estados Unidos</div>
+              <div class="quiz-option" data-answer="incorrect">Finlândia</div>
+            </div>
+            <div class="quiz-result correct">
+              <p class="poppins">Correto! A França implementou uma proibição nacional de celulares em escolas para alunos até 15 anos em 2018.</p>
+            </div>
+            <div class="quiz-result incorrect">
+              <p class="poppins">Incorreto! A resposta certa é França, que proibiu celulares em escolas desde 2018.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <hr />
+    <div class="medias-sociais">
+      <a href="#"><img src="../../Assets/Icones/instagram.svg" alt="Instagram" class="icon-set medium-icon"></a>
+      <a href="#"><img src="../../Assets/Icones/linkedin.svg" alt="LinkedIn" class="icon-set medium-icon"></a>
+      <a href="#"><img src="../../Assets/Icones/whatsapp.svg" alt="WhatsApp" class="icon-set medium-icon"></a>
+      <a href="#"><img src="../../Assets/Icones/tik-tok.svg" alt="TikTok" class="icon-set medium-icon"></a>
+      <a href="#"><img src="../../Assets/Icones/reddit.svg" alt="Reddit" class="icon-set medium-icon"></a>
+      <a href="#"><img src="../../Assets/Icones/github.svg" alt="GitHub" class="icon-set medium-icon"></a>
+    </div>
+    <div>
+      <p class="poppins small-text">©Copyright 2025, todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="../../Assets/Scripts/home.js" type="text/javascript"></script>
+  <script>
+    document.querySelectorAll('.expandable-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const content = card.querySelector('.expandable-card-content');
+        content.classList.toggle('show');
+      });
+    });
+
+    document.querySelectorAll('.quiz-option').forEach(option => {
+      option.addEventListener('click', () => {
+        const question = option.closest('.quiz-question');
+        const resultCorrect = question.querySelector('.quiz-result.correct');
+        const resultIncorrect = question.querySelector('.quiz-result.incorrect');
+        
+        resultCorrect.style.display = 'none';
+        resultIncorrect.style.display = 'none';
+
+        if (option.dataset.answer === 'correct') {
+          resultCorrect.style.display = 'block';
+        } else {
+          resultIncorrect.style.display = 'block';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

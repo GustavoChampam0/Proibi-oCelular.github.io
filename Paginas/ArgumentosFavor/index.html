@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Argumentos a Favor da Proibição</title>
+  <meta name="description" content="Entenda os motivos por trás da proibição de celulares nas escolas, com argumentos detalhados, estudos e um quiz interativo para refletir sobre o tema.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="../../Assets/CSS/style.css">
+  <link rel="stylesheet" href="../../Assets/CSS/home.css">
+  <link rel="shortcut icon" href="../../Assets/Media/Imagens/icon.png" type="image/png">
+  <style>
+    .expandable-card {
+      background: #0E1727;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out;
+    }
+    .expandable-card:hover {
+      background: #121D30;
+      box-shadow: inset 0 0 0 2px #328AF1;
+    }
+    .expandable-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .expandable-card-content {
+      display: none;
+      margin-top: 1rem;
+    }
+    .expandable-card-content.show {
+      display: block;
+    }
+    .quiz-container {
+      background: #0E1727;
+      border-radius: 10px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+    .quiz-question {
+      margin-bottom: 1.5rem;
+    }
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .quiz-option {
+      background: #132C49;
+      padding: 0.8rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .quiz-option:hover {
+      background: #1F98D7;
+    }
+    .quiz-result {
+      margin-top: 1rem;
+      display: none;
+      padding: 1rem;
+      border-radius: 5px;
+    }
+    .quiz-result.correct {
+      display: block;
+      background: #015d9b;
+      color: #0A0F19;
+    }
+    .quiz-result.incorrect {
+      display: block;
+      background: #FF5555;
+      color: #FFFFFF;
+    }
+    .content-section {
+      margin-bottom: 3rem;
+    }
+    .content-section p {
+      margin: 0.5rem 0;
+      line-height: 1.6;
+    }
+    .content-section ul {
+      list-style-type: disc;
+      padding-left: 2rem;
+      margin: 1rem 0;
+    }
+    .content-section li {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button class="btn-tamanho1 btn-cor-primaria btn-menu" id="handleShowModal">
+      <svg width="100" height="100" viewBox="0 0 100 100" class="icon-set">
+        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+        <path class="line line2" d="M 20,50 H 80" />
+        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+      </svg>
+    </button>
+    <ul class="hanken-grotesk regular-text navbar__links mobile__hidden">
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="#reportagens">Notícias</a></li>
+    </ul>
+    <nav class="poppins menu__links hidden">
+      <ul>
+        <li class="navigation__home mobile__show">
+          <a href="../../index.html">Home</a>
+          <a href="#reportagens">Notícias</a>
+        </li>
+        <hr class="mobile__show" />
+        <li><a href="../ArgumentosFavor/index.html">Argumentos a Favor</a></li>
+        <li><a href="../ArgumentosContra/index.html">Argumentos Contra</a></li>
+        <li><a href="../ImpactosEducacao/index.html">Impactos na Educação</a></li>
+        <li><a href="../ExperienciasGlobais/index.html">Experiências Globais</a></li>
+        <li><a href="../TecnologiaEscolar/index.html">Tecnologia no Ensino</a></li>
+        <li><a href="../DebateAtual/index.html">Debate Atual</a></li>
+        <li><a href="../PerspectivasFuturas/index.html">Perspectivas Futuras</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <article class="hanken-grotesk">
+        <h2>Argumentos a Favor da Proibição</h2>
+        <p class="medium-text poppins">
+          Você já pensou por que muitos defendem a proibição de celulares nas escolas? Nesta página, explore os principais argumentos, baseados em estudos e exemplos reais, e participe de um quiz interativo para refletir sobre essa questão!
+        </p>
+      </article>
+    </section>
+
+    <section id="content">
+      <div class="content-section">
+        <h3 class="hanken-grotesk">Por Que Proibir Celulares nas Escolas?</h3>
+        <p class="poppins">
+          A proibição de celulares nas escolas é apoiada por diversos argumentos que visam melhorar o ambiente educacional. Confira os principais motivos:
+        </p>
+        <ul class="poppins">
+          <li><strong>Redução de Distrações:</strong> Sem celulares, os alunos podem se concentrar mais nas aulas, com estudos mostrando melhorias no desempenho acadêmico.</li>
+          <li><strong>Combate ao Cyberbullying:</strong> A ausência de celulares durante o horário escolar diminui os incidentes de bullying online, promovendo um ambiente mais seguro.</li>
+          <li><strong>Fortalecimento da Interação Social:</strong> Sem telas, os estudantes interagem mais pessoalmente, desenvolvendo habilidades sociais essenciais para a vida.</li>
+          <li><strong>Prevenção de Trapaças:</strong> A proibição reduz o uso de celulares para colar em provas ou acessar respostas não permitidas.</li>
+        </ul>
+        <p class="poppins">
+          Esses argumentos sugerem que a proibição pode criar um ambiente mais focado e equitativo para todos os alunos.
+        </p>
+      </div>
+
+      <div class="content-section">
+        <h3 class="hanken-grotesk">Evidências que Apoiam a Proibição</h3>
+        <div class="expandable-card">
+          <div class="expandable-card-header">
+            <h4 class="hanken-grotesk">Estudo da UNESCO (2023)</h4>
+            <img src="../../Assets/Icones/angulo-pequeno-para-baixo.svg" class="medium-icon" alt="Expandir">
+          </div>
+          <div class="expandable-card-content">
+            <p class="poppins">
+              Um relatório global da UNESCO indicou que a proibição de celulares em salas de aula aumentou a concentração dos alunos em até 15%, especialmente em disciplinas como matemática e ciências.
+            </p>
+          </div>
+        </div>
+        <div class="expandable-card">
+          <div class="expandable-card-header">
+            <h4 class="hanken-grotesk">Experiência na França</h4>
+            <img src="../../Assets/Icones/angulo-pequeno-para-baixo.svg" class="medium-icon" alt="Expandir">
+          </div>
+          <div class="expandable-card-content">
+            <p class="poppins">
+              Desde a lei de 2018 que baniu celulares para alunos até 15 anos, a França observou uma redução de 30% nos casos de cyberbullying e maior participação em atividades presenciais.
+            </p>
+          </div>
+        </div>
+        <div class="expandable-card">
+          <div class="expandable-card-header">
+            <h4 class="hanken-grotesk">Pesquisa do Reino Unido</h4>
+            <img src="../../Assets/Icones/angulo-pequeno-para-baixo.svg" class="medium-icon" alt="Expandir">
+          </div>
+          <div class="expandable-card-content">
+            <p class="poppins">
+              Um estudo de 2022 mostrou que escolas que proibiram celulares tiveram um aumento de 10% nas notas dos alunos em exames finais, atribuído à menor distração.
+            </p>
+          </div>
+        </div>
+        <p class="poppins">
+          Esses dados reforçam a ideia de que a proibição pode trazer benefícios mensuráveis ao aprendizado.
+        </p>
+      </div>
+
+      <div class="content-section">
+        <h3 class="hanken-grotesk">Desafios e Considerações</h3>
+        <p class="poppins">
+          Apesar dos benefícios, a proibição enfrenta algumas críticas e desafios que precisam ser considerados:
+        </p>
+        <ul class="poppins">
+          <li><strong>Comunicação em Emergências:</strong> Sem celulares, pode ser mais difícil contatar pais ou autoridades em situações críticas.</li>
+          <li><strong>Resistência dos Alunos:</strong> Alguns estudantes podem se opor à proibição, exigindo campanhas de conscientização.</li>
+          <li><strong>Implementação:</strong> Escolas precisam de recursos para fiscalizar e aplicar a proibição de forma justa.</li>
+        </ul>
+        <p class="poppins">
+          Essas questões podem ser abordadas com políticas claras e alternativas, como telefones fixos em emergências.
+        </p>
+      </div>
+
+      <div class="content-section">
+        <h3 class="hanken-grotesk">Teste Seus Conhecimentos: Quiz Interativo</h3>
+        <div class="quiz-container">
+          <div class="quiz-question">
+            <p class="poppins large-text">Qual é um dos principais argumentos a favor da proibição de celulares nas escolas?</p>
+            <div class="quiz-options">
+              <div class="quiz-option" data-answer="correct">Redução de distrações</div>
+              <div class="quiz-option" data-answer="incorrect">Aumento do aprendizado digital</div>
+              <div class="quiz-option" data-answer="incorrect">Facilitação da comunicação</div>
+            </div>
+            <div class="quiz-result correct">
+              <p class="poppins">Correto! A redução de distrações é um dos principais argumentos para proibir celulares, melhorando o foco dos alunos.</p>
+            </div>
+            <div class="quiz-result incorrect">
+              <p class="poppins">Incorreto! O argumento principal é a redução de distrações, que ajuda a melhorar a concentração em sala de aula.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <hr />
+    <div class="medias-sociais">
+      <a href="#"><img src="../../Assets/Icones/instagram.svg" alt="Instagram" class="icon-set medium-icon"></a>
+      <a href="#"><img src="../../Assets/Icones/linkedin.svg" alt="LinkedIn" class="icon-set medium-icon"></a>
+      <a href="#"><img src="../../Assets/Icones/whatsapp.svg" alt="WhatsApp" class="icon-set medium-icon"></a>
+      <a href="#"><img src="../../Assets/Icones/tik-tok.svg" alt="TikTok" class="icon-set medium-icon"></a>
+      <a href="#"><img src="../../Assets/Icones/reddit.svg" alt="Reddit" class="icon-set medium-icon"></a>
+      <a href="#"><img src="../../Assets/Icones/github.svg" alt="GitHub" class="icon-set medium-icon"></a>
+    </div>
+    <div>
+      <p class="poppins small-text">©Copyright 2025, todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="../../Assets/Scripts/home.js" type="text/javascript"></script>
+  <script>
+    document.querySelectorAll('.expandable-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const content = card.querySelector('.expandable-card-content');
+        content.classList.toggle('show');
+      });
+    });
+
+    document.querySelectorAll('.quiz-option').forEach(option => {
+      option.addEventListener('click', () => {
+        const question = option.closest('.quiz-question');
+        const resultCorrect = question.querySelector('.quiz-result.correct');
+        const resultIncorrect = question.querySelector('.quiz-result.incorrect');
+        
+        resultCorrect.style.display = 'none';
+        resultIncorrect.style.display = 'none';
+
+        if (option.dataset.answer === 'correct') {
+          resultCorrect.style.display = 'block';
+        } else {
+          resultIncorrect.style.display = 'block';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
